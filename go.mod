@@ -1,4 +1,4 @@
-module github.com/vbodarev/go-smppp
+module github.com/vbodarev/go-smpp
 
 go 1.15
 
