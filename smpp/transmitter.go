@@ -119,6 +119,7 @@ func (t *Transmitter) handlePDU(f HandlerFunc) {
 		if err != nil || p == nil {
 			break
 		}
+
 		key := p.Header().Key()
 		t.tx.Lock()
 		rc := t.tx.inflight[key]
@@ -331,13 +332,13 @@ func (t *Transmitter) SubmitLongMsg(sm *ShortMessage) ([]ShortMessage, error) {
 	maxLen := 133 // 140-7 (UDH with 2 byte reference number)
 	switch sm.Text.(type) {
 	case pdutext.GSM7:
-		maxLen = 152 // to avoid an escape character being split between payloads
+		maxLen = 153 // to avoid an escape character being split between payloads
 		break
 	case pdutext.GSM7Packed:
-		maxLen = 132 // to avoid an escape character being split between payloads
+		maxLen = 134 // to avoid an escape character being split between payloads
 		break
 	case pdutext.UCS2:
-		maxLen = 132 // to avoid a character being split between payloads
+		maxLen = 134 // to avoid a character being split between payloads
 		break
 	}
 	rawMsg := sm.Text.Encode()
