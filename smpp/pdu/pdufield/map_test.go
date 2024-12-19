@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/vbodarev/go-smpp/smpp/pdu/pdutext"
+	"github.com/vbodarev/go-smpp/v2/smpp/pdu/pdutext"
 )
 
 func TestMapSet(t *testing.T) {

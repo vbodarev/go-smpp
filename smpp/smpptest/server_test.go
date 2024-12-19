@@ -9,10 +9,10 @@ import (
 	"net"
 	"testing"
 
-	"github.com/vbodarev/go-smpp/smpp/pdu"
-	"github.com/vbodarev/go-smpp/smpp/pdu/pdufield"
-	"github.com/vbodarev/go-smpp/smpp/pdu/pdutext"
-	"github.com/vbodarev/go-smpp/smpp/pdu/pdutlv"
+	"github.com/vbodarev/go-smpp/v2/smpp/pdu"
+	"github.com/vbodarev/go-smpp/v2/smpp/pdu/pdufield"
+	"github.com/vbodarev/go-smpp/v2/smpp/pdu/pdutext"
+	"github.com/vbodarev/go-smpp/v2/smpp/pdu/pdutlv"
 )
 
 func TestServer(t *testing.T) {
